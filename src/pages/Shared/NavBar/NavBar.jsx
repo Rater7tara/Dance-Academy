@@ -4,11 +4,13 @@ import logo from '../../../assets/logo1.png';
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { AuthContext } from '../../../providers/AuthProvider';
 import './NavBar.css';
+import useCart from '../../../hooks/useCart';
+import useAdmin from '../../../hooks/useAdmin';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-
-    // const [cart] = useCart();
+    const [isAdmin] = useAdmin();
+    const [cart] = useCart();
 
     const handleLogOut = () => {
         logOut()
@@ -24,8 +26,8 @@ const NavBar = () => {
 
 
 
-        {/* {user?.email ? <>
-            <Link className='hover:bg-orange-500 rounded-md' to='/dashboard'>Dashboard</Link>
+        {user?.email ? <>
+            <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to='/dashboard'>Dashboard</Link>
 
         </>
             :
@@ -33,12 +35,12 @@ const NavBar = () => {
 
             </Link>
 
-        } */}
-        {/* <Link className='hover:bg-orange-500 rounded-md' to="/dashboard/mycart">
+        }
+        <li><Link className='hover:bg-orange-500 rounded-md flex text-center align-middle justify-center font-bold' to="/dashboard/mycart">
 
             <FaShoppingCart></FaShoppingCart>
             <div className='badge badge-warning'>+{cart?.length || 0}</div>
-        </Link> */}
+        </Link></li>
 
     </>
     return (
@@ -67,11 +69,11 @@ const NavBar = () => {
                     }
                     {user ?
 
-                        <button onClick={handleLogOut} className="btn btn-info">Logout</button>
+                        <button onClick={handleLogOut} className="btn btn-orange">Logout</button>
 
                         :
                         <Link to="/login">
-                            <button className="btn btn-info  ">Login</button>
+                            <button className="btn btn-orange  ">Login</button>
                         </Link>
                     }
 

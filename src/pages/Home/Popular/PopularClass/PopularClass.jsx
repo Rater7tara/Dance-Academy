@@ -8,7 +8,7 @@ const PopularClass = ({ item }) => {
         <>
 
             <div className="avatar relative inline-flex w-fit">
-                <div className="container  rounded-full relative max-w-xs overflow-hidden bg-cover bg-no-repeat ">
+                <div className="container  rounded-full relative max-w-sm overflow-hidden bg-cover bg-no-repeat ">
                     <img src={dance_image} className="image" />
                     <div className="middle">
                         <div className="text text-6xl">

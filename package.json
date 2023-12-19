@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.14.1",
+    "axios": "^1.6.2",
     "firebase": "^10.7.1",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
@@ -19,9 +21,11 @@
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.49.2",
     "react-icons": "^4.12.0",
+    "react-parallax": "^3.5.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.0",
     "sort-by": "^0.0.2",
+    "sweetalert2": "^11.10.1",
     "tw-elements": "^1.1.0"
   },
   "devDependencies": {
