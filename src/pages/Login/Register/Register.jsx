@@ -6,7 +6,6 @@ import './Register.css';
 import sign from '../../../assets/sign.json';
 import Lottie from "lottie-react";
 import { useForm } from "react-hook-form";
-import Swal from 'sweetalert2'
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 
@@ -32,13 +31,13 @@ const Register = () => {
                     .then(() => {
                         // The fetch call has been removed
                         reset();
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'User created successfully.',
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
+                        // Swal.fire({
+                        //     position: 'top-end',
+                        //     icon: 'success',
+                        //     title: 'User created successfully.',
+                        //     showConfirmButton: false,
+                        //     timer: 1500
+                        // });
                         navigate('/');
                     })
                     .catch(error => console.log(error));
