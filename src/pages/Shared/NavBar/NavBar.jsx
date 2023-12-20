@@ -20,14 +20,14 @@ const NavBar = () => {
 
 
     const navOptions = <>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/home">Home</Link>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/instructors">Instructors</Link>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/classes">Classes</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="home">Home</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="instructors">Instructors</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="classes">Classes</Link>
 
 
 
         {user?.email ? <>
-            <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to='/dashboard'>Dashboard</Link>
+            <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to='dashboard'>Dashboard</Link>
 
         </>
             :
@@ -36,7 +36,7 @@ const NavBar = () => {
             </Link>
 
         }
-        <li><Link className='hover:bg-orange-500 rounded-md flex text-center align-middle justify-center font-bold' to="/dashboard/mycart">
+        <li><Link className='hover:bg-orange-500 rounded-md flex text-center align-middle justify-center font-bold' to="dashboard/mycart">
 
             <FaShoppingCart></FaShoppingCart>
             <div className='badge badge-warning'>+{cart?.length || 0}</div>
