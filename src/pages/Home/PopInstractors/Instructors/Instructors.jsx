@@ -11,7 +11,7 @@ const Instructors = () => {
 
     return (
         <div className='intructor-main-div  rounded-lg bg-cover'>
-           <div className='bg-indigo-950 bg-opacity-80 py-16'>
+           <div className='bg-slate-950 bg-opacity-80 py-16'>
            <div className='text-center'>
                 <h1 className='text-6xl text-white my-4 font-bold'>Our Popular Instructors</h1>
                 <p className='text-1xl text-orange-500 my-4 font-bold'>Choose your Instructor</p>

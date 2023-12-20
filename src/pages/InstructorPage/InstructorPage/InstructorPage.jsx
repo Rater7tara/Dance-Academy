@@ -21,7 +21,7 @@ const InstructorPage = () => {
             <Cover></Cover>
             <div className='bg-cover'>
             <div className='bg-slate-950 py-16'>
-            <h1 className='text-5xl font-bold text-center py-4 text-orange-500'>MEET OUR INSTRUCTORS</h1>
+            <h1 className='text-5xl font-bold text-center py-4 mb-5 text-orange-500'>MEET OUR INSTRUCTORS</h1>
             <div className='grid md:grid-cols-2  lg:grid-cols-3 gap-4 p-6' >
               
               {
