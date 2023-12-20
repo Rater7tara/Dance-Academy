@@ -9,10 +9,13 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
-    const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await axiosSecure.get('/users')
-        return res.data;
-    })
+    const { data: users = [], refetch } = useQuery({
+        queryKey: ['users'],
+        queryFn: async () => {
+          const res = await axiosSecure.get('/users');
+          return res.data;
+        },
+      });
 
     const handleMakeInstructor = user =>{
         fetch(`https://summer-camp-server-beige.vercel.app/users/instructor/${user._id}`, {
