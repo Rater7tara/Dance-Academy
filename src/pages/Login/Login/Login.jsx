@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import login from '../../../assets/login.json';
 import Lottie from "lottie-react";
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -19,29 +20,29 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleLogin = async (event) => {
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-    
-        try {
-            const result = await signIn(email, password);
-            const user = result.user;
-    
-            // Display a success toast
-            toast.success('User Login Successful', {
-                position: 'top-right',
-                duration: 2000,
-                isClosable: true,
-            });
-    
-            navigate(from, { replace: true });
-        } catch (error) {
-            // Handle login errors and display an error toast if necessary
-            console.error(error);
-        }
-    };
+        console.log(email, password);
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate(from, { replace: true });
+            })
+    }
+
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);

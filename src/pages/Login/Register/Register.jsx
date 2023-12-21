@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import { useForm } from "react-hook-form";
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
@@ -31,13 +32,13 @@ const Register = () => {
                     .then(() => {
                         // The fetch call has been removed
                         reset();
-                        // Swal.fire({
-                        //     position: 'top-end',
-                        //     icon: 'success',
-                        //     title: 'User created successfully.',
-                        //     showConfirmButton: false,
-                        //     timer: 1500
-                        // });
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                         navigate('/');
                     })
                     .catch(error => console.log(error));
@@ -49,7 +50,7 @@ const Register = () => {
     return (
         <div className=" p-10 md:flex justify-center">
             <Helmet>
-                <title>Register | Wanderlust Ventures</title>
+                <title>Register | Dance 'til Dawn</title>
 
             </Helmet>
 

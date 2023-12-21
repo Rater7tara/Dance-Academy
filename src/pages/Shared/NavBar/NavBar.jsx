@@ -20,9 +20,9 @@ const NavBar = () => {
 
 
     const navOptions = <>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="home">Home</Link>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="instructors">Instructors</Link>
-        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="classes">Classes</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/home">Home</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/instructors">Instructors</Link>
+        <Link className='hover:bg-orange-500 rounded-md me-4 p-2 font-bold text-center' to="/classes">Classes</Link>
 
 
 
